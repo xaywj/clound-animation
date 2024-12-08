@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  position: relative;
+  background-image: url("bg.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+}
+.blog-banner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.cloud {
+  position: absolute;
+  min-height: 50vh;
+  min-width: 100%;
+  pointer-events: none;
+  bottom: 0;
+  opacity: 0.9;
+  animation: cloudAnimation calc(var(--i) * 8s) linear infinite;
+}
+
+@keyframes cloudAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
